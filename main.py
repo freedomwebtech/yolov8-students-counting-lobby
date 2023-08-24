@@ -74,8 +74,7 @@ while True:
     bbox_id=tracker.update(list)
     for bbox in bbox_id:
         x3,y3,x4,y4,id=bbox
-        cx=int(x3+x4)//2
-        cy=int(y3+y4)//2
+        
         result=cv2.pointPolygonTest(np.array(area2,np.int32),((x4,y4)),False)
         if result>=0:
            cv2.circle(frame,(x4,y4),4,(255,0,255),-1)
