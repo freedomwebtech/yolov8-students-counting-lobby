@@ -49,7 +49,7 @@ while True:
     a=results[0].boxes.data
     px=pd.DataFrame(a).astype("float")
 #    print(px)
-    list=[]
+    
    
     for index,row in px.iterrows():
 #        print(row)
